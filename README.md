@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<link rel="stylesheet" href="readme.css">
 
-<h1 style="text-align: center;">PRO REALTY REAL ESTATE INVESTOR</h1>
-=======
 <h1 style="text-align: center;">PRO REALTY REAL ESTATE INVESTOR </h1>
 
 ### PROJECT OVERVIEW 
@@ -96,7 +92,7 @@ from sklearn.decomposition import PCA
 
 
 
->>>>>>> 6217417917a6804c470640bf9f99b9ac8ffb2e99
+
 
 
 
