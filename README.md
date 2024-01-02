@@ -203,8 +203,15 @@ preds = model.predict(X_valid)
 Mean squared error: 43056428188.69171
 R-squared: 0.6379508703871847
 ```
+### Residual calculations 
 
+Residual calculations  measure how much the model's predictions vary from the true values.this offers valuable insights into model performance and potential areas for improvement. It can also help identify patterns in errors, suggesting model refinements.
 
+![Residual_Plot](Residual_Plot.png)
+
+![RHistogram_of_Residuals](Histogram_of_Residuals.png)
+
+![qq_plot](qq_plot.png)
 
 
 
