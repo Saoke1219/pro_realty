@@ -89,11 +89,34 @@ from sklearn.preprocessing import scale
 from sklearn.decomposition import PCA
 
 ```
-1.How are the various variables presented in our dataset are affecting housing prices.
+1.By observing the correlation heatmap we are able to see  how the various variables presented in our dataset are affecting housing prices .
 
 
-![price_vs_Square_footage_living](price_vs_Square_footage_living.png)
+![correlation_heatmap](correlation_heatmap.png)
 
+Strongest Positive Correlations with Price:
+.sqft_living (0.702): Suggests a strong positive relationship between house price and living space, indicating larger homes tend to have higher prices.
+.grade (0.667): Higher-grade homes (likely reflecting better quality and features) generally have higher prices. .bathrooms (0.525): Suggests homes with more bathrooms tend to have higher prices.
+.sqft_above (0.606): This reflects that above-ground living area is a significant factor influencing price.
+
+Moderate Positive Correlations with Price:
+.sqft_living15 (0.585): This suggests living space in the surrounding area is also somewhat correlated with price.
+.view (0.397): Homes with better views tend to have higher prices.
+.bedrooms (0.308): More bedrooms are associated with higher prices, but the correlation is less strong than other factors.
+
+Weak or No Correlation with Price:
+.id: the house ID is not informative for price prediction.
+.sqft_lot (0.089): Lot size has a very weak correlation with price.
+.yr_built (0.054): Year built has minimal correlation with price
+
+### explore categorical features
+
+```
+print(df['waterfront'].value_counts())
+print(df['condition'].value_counts())
+print(df['grade'].value_counts())
+
+```
 
 
 
