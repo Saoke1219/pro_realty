@@ -85,7 +85,7 @@ from sklearn.decomposition import PCA
 ```
 1.How are the various variables presented in our dataset are affecting housing prices.
 
-![pricevsSquarefootageliving.png](price vs Square footage living.png)
+![price_vs_square_footage_living.png](price_vs_square_footage_living.png)
 
 
 
