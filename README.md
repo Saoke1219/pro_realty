@@ -48,8 +48,40 @@ sqft_living15 :Living room area in 2015(implies-- some renovations) This might o
 
 sqft_lot15 :lotSize area in 2015(implies-- some renovations)
 
+### BUSINESS PROBLEM.
+Pro Realty, a leading real estate firm, is poised for expansion and aspires to solidify its position as the premier real estate investor. To achieve this goal, Pro Realty recognizes the critical need to optimize its Return on Investment (ROI). The company aims to leverage the vast potential within the King County dataset to seeks strategic insights and data-driven solutions to enhance decision-making, identify lucrative investment opportunities, and ultimately maximize ROI. How can Pro Realty harness the power of the King County dataset to inform its expansion strategy, mitigate risks, and position itself as a dominant force in the real estate market.
 
+### STAKE HOLDER(PRO REALTY) OBJECTIVES.
+1.Identify factors influencing house prices in King County.
 
+2.Predict housing prices with high accuracy.
+
+3.Make informed investment decisions by targetting properties with high potential returns.
+
+4.Minimise risk by avoiding overpaying for properties.
+
+5.Optimize portfolio diversification by investing in different neighbourhoods and property types.
+
+You will require the following libraries
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+%matplotlib inline
+import seaborn as sns
+import mpl_toolkits
+import statsmodels.api as sm
+import calendar
+import warnings 
+warnings.filterwarnings('ignore')
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn import ensemble
+from sklearn.preprocessing import scale
+from sklearn.decomposition import PCA
+
+```
 
 
 
