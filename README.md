@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="readme.css">
 
-<h1 style="text-align: center;">PRO REALTY REAL ESTATE INVESTOR</h1>
-=======
+
+
 <h1 style="text-align: center;">PRO REALTY REAL ESTATE INVESTOR </h1>
 
 ### PROJECT OVERVIEW 
@@ -89,14 +89,12 @@ from sklearn.decomposition import PCA
 ```
 1.How are the various variables presented in our dataset are affecting housing prices.
 
-![pricevsSquarefootageliving.png](price vs Square footage living.png)
+![price_vs_Square_footage_living.png](price_vs_Square_footage_living.png)
 
 
 
 
 
-
->>>>>>> 6217417917a6804c470640bf9f99b9ac8ffb2e99
 
 
 
