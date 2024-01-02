@@ -213,10 +213,35 @@ Residual calculations  measure how much the model's predictions vary from the tr
 
 ![qq_plot](qq_plot.png)
 
+```
+#linear regression model
+coefficients = model.coef_
+intercept = model.intercept_
 
+# Print coefficients and intercept
+print("Intercept:", intercept)
+print("Coefficients:", dict(zip(features, coefficients)))
 
+```
+This equation allows us to understand how changes in the features influence the predicted price.one such example is Sqft_living: For each additional square foot of living space, the predicted price increases by approximately 193.61.
 
+From the above analysis the following are our key features;
+Grade
 
+Waterfront
+
+Bathrooms
+
+sqft_living
+
+floors
+
+### RECOMMENDATIONS
+
+Consider the above key features as having te biggest positive impact on predicted prices therefore potentially increasing Pro Realty's ROI(return on investment)
+
+### CONCLUSION
+The multiple linear regression model between the various features and price provides an insight into how changes in feature in turn affects changes in predicted prices,However we should acknowledge the limitations of the model.While it captures linear relationships , it may not capture complex interactions between features.So Pro Realty should continue the refinement of the model by exploring additional features in the subsequent years as well as adopting Advanced techniques.
 
 
 
