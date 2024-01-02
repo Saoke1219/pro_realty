@@ -117,8 +117,92 @@ print(df['condition'].value_counts())
 print(df['grade'].value_counts())
 
 ```
+from the above arrived at the decision to one-hot encoding for Waterfront column
+
+```
+df = pd.read_csv('kc_house_data.csv')
+# Select the categorical features to encode
+categorical_features = ['waterfront']
+
+# One-hot encode the features
+df = pd.get_dummies(df, columns=categorical_features, drop_first=True)
+
+# Print the encoded DataFrame to see the new columns
+df.head()
+
+```
+proceeded drop the following columns 
+
+```
+# Specify columns to drop as a list
+columns_to_drop = ['date', 'view', 'sqft_basement', 'yr_renovated', 'zipcode', 'lat', 'long', 'sqft_living15', 'sqft_lot15']  
+
+# Drop the columns
+df = df.drop(columns_to_drop, axis=1)
+
+# Verify the updated DataFrame
+print(df.head())  
+print(df.columns)
+
+```
+
+### MODEL BUILDING AND PREDICTION
+
+#### SIMPLE LINEAR REGRESSION
+
+```
+y = df['price']  
+features = ['sqft_living']  
+# Define features
+X = df[features]  # Extract feature matrix
+
+X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.2, random_state=0)  # Split data
+
+model = LinearRegression(fit_intercept=True)  # Create model instance
+model.fit(X_train, y_train)  # Train the model
+
+preds = model.predict(X_valid)  # Make predictions on validation set
+
+```
+```
+mse = mean_squared_error(y_valid, preds)
+r2 = r2_score(y_valid, preds)
+print("Mean squared error:", mse)
+print("R-squared:", r2)
+
+```
+```
+Mean squared error: 61940787124.624756
+R-squared: 0.4791577237265374
+````
 
 
+#### MULTIPLE LINEAR REGRESSION
+
+```
+correlation_matrix = df.corr()
+correlation_with_price = correlation_matrix['price'].abs().sort_values(ascending=False)
+print(correlation_with_price)
+```
+```
+y = df['price']  
+features = ['bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot',
+       'floors', 'condition', 'grade', 'sqft_above', 'yr_built', 'waterfront_1']  
+# Define features
+X = df[features]  # Extract feature matrix
+
+X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.2, random_state=0)  # Split data
+
+model = LinearRegression(fit_intercept=True)  # Create model instance
+model.fit(X_train, y_train) # Train the model
+
+preds = model.predict(X_valid)
+```
+
+```
+Mean squared error: 43056428188.69171
+R-squared: 0.6379508703871847
+```
 
 
 
